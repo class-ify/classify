@@ -1,0 +1,98 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+      <!-- Test form wrapper-->
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+
+
+            </div>
+            <div class="row">
+
+
+        </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Suggestion</h5>
+
+                        </div>
+                        <div class="ibox-content" style="display: block;">
+
+                            <form method="get" class="form-horizontal" #giveSuggestion="ngForm" (ngSubmit)="giveSuggestionData(giveSuggestion.value,$event)">
+
+                                <div class="form-group ">
+                                    <label class="col-sm-2 control-label">Student Name</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control" ngModel name="studentName">
+                                            <option selected="selected">Name</option>
+                                            <option>Siddhesh</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Message</label>
+
+                                    <div class="col-sm-10">
+                                      <textarea class="form-control" rows="10" cols="50" ngModel name="message" required placeholder="Type your suggestion here">
+                                      </textarea>
+                                    </div>
+                                </div>
+
+
+                                <div class="hr-line-dashed"></div>
+
+
+                                <div class="form-group">
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                        <button class="btn btn-primary" type="submit">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+
+            </div>
+
+
+        <!--.............. Test wrapper ends.................-->
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+            });
+        </script>
