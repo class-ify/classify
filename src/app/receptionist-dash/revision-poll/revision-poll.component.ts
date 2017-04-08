@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PollService } from '../../services/poll.service';
+import { Router } from '@angular/router';
+import { Poll } from '../../models/poll';
 
 @Component({
   selector: 'app-revision-poll',
@@ -7,14 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RevisionPollComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,
+      private pollService: PollService) { }
 
-  ngOnInit() {
-  }
+      ngOnInit() {}
 
   revisionPollData(data:any,e:Event){
     e.preventDefault();
-    console.log(data);
-  }
-  
+    this.pollService.addPoll(data)
+    .subscribe(
+      result => {
+          if (result === true) {
+              // login successful
+              // VIEW POLLS TO BE CREATED//
+              this.router.navigate(['/receptionist-dash/revision-poll']);
+          } else {
+              // login failed
+      }}
+    );
+    }
+
 }

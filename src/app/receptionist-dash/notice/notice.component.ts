@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticeService } from '../../services/notice.service';
+import { Router } from '@angular/router';
+import { Notice } from '../../models/notice';
 
 @Component({
   selector: 'app-notice',
@@ -8,14 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,
+      private noticeService: NoticeService) { }
 
-  ngOnInit() {
-  }
+      ngOnInit() {
 
-  addNoticeData(data:any,e:Event){
-    e.preventDefault();
-    console.log(data);
-  }
+      }
+
+      addNoticeData(data:any,e:Event){
+        e.preventDefault();
+        this.noticeService.addNotice(data)
+        .subscribe(
+          result => {
+              if (result === true) {
+                  // login successful
+                  this.router.navigate(['/receptionist-dash/notice']);
+              } else {
+                  // login failed
+          }}
+        );
+
+      }
 
 }

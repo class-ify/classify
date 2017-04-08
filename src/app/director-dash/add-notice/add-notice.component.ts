@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticeService } from '../../services/notice.service';
+import { Router } from '@angular/router';
+import { Notice } from '../../models/notice';
 
 @Component({
   selector: 'app-add-notice',
@@ -7,14 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNoticeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,
+      private noticeService: NoticeService) { }
 
-  ngOnInit() {
-  }
+      ngOnInit() {
 
-  addNoticeData(data:any,e:Event){
-    e.preventDefault();
-    console.log(data);
-  }
+      }
+
+      addNoticeData(data:any,e:Event){
+        e.preventDefault();
+        this.noticeService.addNotice(data)
+        .subscribe(
+          result => {
+              if (result === true) {
+                  // notices add
+                  this.router.navigate(['/director-dash/notice']);
+              } else {
+                  // notice not added
+          }}
+        );
+
+      }
 
 }

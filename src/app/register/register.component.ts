@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginLogoutService } from '../services/login-logout.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,14 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  loading = false;
+  error = '';
 
-  ngOnInit() {
-  }
+constructor(private router: Router,
+    private loginLogoutService: LoginLogoutService) { }
 
-  registerdata(data:any,e:Event){
+    ngOnInit() {}
+
+  registerData(data:any,e:Event){
     e.preventDefault();
-    //done
-    window.location.href="/login";
+    this.loading=true;
+    this.loginLogoutService.register(JSON.stringify(data))
+        .subscribe(result => {
+            if (result === true) {
+                // login successful
+                this.router.navigate(['/login']);
+            } else {
+                // login failed
+                this.error = 'User with the given Email already exists!';
+                this.loading = false;
+              }});
   }
 }

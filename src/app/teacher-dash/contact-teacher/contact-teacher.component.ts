@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactReceptionistComponent } from '../../receptionist-dash/contact-receptionist/contact-receptionist.component';
+import { User } from '../../models/user';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-contact-teacher',
@@ -8,9 +9,16 @@ import { ContactReceptionistComponent } from '../../receptionist-dash/contact-re
 })
 export class ContactTeacherComponent implements OnInit {
 
-  constructor() { }
+  users: User[] = [];
 
-  ngOnInit() {
-  }
+   constructor(private userService: UserService) { }
+
+   ngOnInit() {
+       // get users from secure api end point
+       this.userService.getTeacher()
+           .subscribe(users => {
+               this.users = users;
+           });
+   }
 
 }

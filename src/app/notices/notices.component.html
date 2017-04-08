@@ -25,24 +25,17 @@
         <div class="wrapper wrapper-content  animated fadeInRight blog">
 
                     <div class="ibox">
-                        <div class="ibox-content">
+                        <div  *ngFor="let notice of notices" class="ibox-content">
                             <a href="article.html" class="btn-link">
                                 <h2>
-                                    One morning, when Gregor Samsa
+                                    {{notice.subject}}
                                 </h2>
                             </a>
                             <div class="small m-b-xs">
-                                <strong>Adam Novak</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> 28th Oct 2015</span>
+                                <strong>{{notice.userName}}</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> {{notice.createdAt}}</span>
                             </div>
                             <p>
-                                English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
-                                English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
-                                English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
-                                English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
-                                English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
-                                English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
-                                English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
-                                English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+                                {{notice.body}}
                             </p>
                             <div class="row">
                                 <div class="col-md-6">

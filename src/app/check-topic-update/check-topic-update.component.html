@@ -15,12 +15,6 @@
 <div class="pace-activity"></div></div>
 
 
-
-
-
-
-
-
         <div class="wrapper wrapper-content animated fadeInRight">
 
 
@@ -54,27 +48,22 @@
                                     <th>Topic</th>
                                     <th>By Professor</th>
                                     <th>Status</th>
+                                    <th>Completion Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Physics</td>
-                                    <td>Rotational Motion</td>
-                                    <td>Siddhesh</td>
-                                    <td>Done</td>
+
+
+
+                                <tr *ngFor="let topic of topics">
+                                    <td>{{topic.subject}}</td>
+                                    <td>{{topic.name}}</td>
+                                    <td>{{topic.byProfessor}}</td>
+                                    <td>{{topic.isCompleted}}</td>
+                                    <td>{{topic.completionDate}}</td>
                                 </tr>
-                                <tr>
-                                    <td>Chemistry</td>
-                                    <td>Solid State</td>
-                                    <td>Vijay</td>
-                                    <td>Done</td>
-                                </tr>
-                                <tr>
-                                    <td>Web Development</td>
-                                    <td>Routes</td>
-                                    <td>Rane</td>
-                                    <td>Done</td>
-                                </tr>
+
+
                                 </tbody>
                             </table>
 

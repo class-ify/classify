@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TopicService } from '../../services/topic.service';
+import { Router } from '@angular/router';
+import { Notice } from '../../models/notice';
 
 @Component({
   selector: 'app-update-topic',
@@ -7,14 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateTopicComponent implements OnInit {
 
-  constructor() { }
+  constructor(private topicService:TopicService,
+  private router:Router) { }
 
   ngOnInit() {
   }
 
   updateTopicData(data:any,e:Event){
     e.preventDefault();
-    console.log(data);
+    this.topicService.updateTopic(data)
+    .subscribe(
+      result => {
+          if (result === true) {
+              // login successful
+              this.router.navigate(['/receptionist-dash/checkTopicUpdate']);
+          } else {
+              // login failed
+      }}
+    );
   }
 
 }

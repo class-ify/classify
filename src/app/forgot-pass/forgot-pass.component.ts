@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginLogoutService } from '../services/login-logout.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forgot-pass',
@@ -7,18 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotPassComponent implements OnInit {
 
-  constructor() { }
+  loading = false;
+  error = '';
 
-  ngOnInit() {
-  }
+constructor(private router: Router,
+    private loginLogoutService: LoginLogoutService) { }
 
-  forgotdata(data:any,e:Event){
+    ngOnInit() {}
+
+  forgotData(data:any,e:Event){
     e.preventDefault();
-    console.log(data);
-    // toast
-    setTimeout(function(){
-      window.location.href="/login";
-    },2000);
+    this.loginLogoutService.forgotPassword(JSON.stringify(data))
+        .subscribe(result => {
+            if (result === true) {
+                this.router.navigate(['/']);
+            } else {
+                // login failed
+                this.error = 'Invalid Email Address!';
+                this.loading = false;
+              }});
+
   }
 
 }

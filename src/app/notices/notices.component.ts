@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticeService } from '../services/notice.service';
+import { Router } from '@angular/router';
+import { Notice } from '../models/notice';
 
 @Component({
   selector: 'app-notices',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notices.component.css']
 })
 export class NoticesComponent implements OnInit {
+ notices : Notice[] =[];
 
-  constructor() { }
+constructor(private router: Router,
+    private noticeService: NoticeService) { }
 
-  ngOnInit() {
-  }
-
+    ngOnInit() {
+           // reset login status
+            this.noticeService.getNotice()
+            .subscribe(
+              notices => {
+                this.notices=notices;
+              }
+            );
+      }
 }

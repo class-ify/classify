@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, Headers, RequestOptions, Response } from '@angular/http';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-create-studyplanner',
@@ -7,14 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateStudyplannerComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private router: Router,
+      private http: Http) {
   }
 
-  newplan(data:any,e:Event){
+  ngOnInit(){}
+
+  newPlan(data:any): Observable<boolean> {
+      // add authorization header with jwt token
+      let headers = new Headers({ 'Authorization': 'Bearer ' + localStorage.getItem("token")});
+      let options = new RequestOptions({ headers: headers });
+
+      // get users from api
+      return this.http.post('/api/v1/studyplanner/create',JSON.stringify(data),options)
+          .map((response: Response) => response.json());
+  }
+
+  newPlanData(data:any,e:Event){
     e.preventDefault();
-    console.log(data);
+    this.newPlan(data);
   }
 
 }

@@ -92,7 +92,7 @@ import { ViewScheduleComponent } from './director-dash/view-schedule/view-schedu
     CheckFacultyRatingComponent,
     UpdateTestMarksComponent,
     ViewScheduleComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     FormsModule,
