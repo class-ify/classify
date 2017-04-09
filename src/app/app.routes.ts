@@ -43,6 +43,7 @@ import { UpdateTestMarksComponent } from './receptionist-dash/update-test-marks/
 import { ViewScheduleComponent } from './director-dash/view-schedule/view-schedule.component';
 import { ViewPollComponent } from './receptionist-dash/view-poll/view-poll.component';
 import { RateFacultyComponent } from './student-dash/rate-faculty/rate-faculty.component';
+import { DiscussionComponent } from './discussion/discussion.component';
 
 
 const APP_ROUTES = [
@@ -69,7 +70,9 @@ const APP_ROUTES = [
     { path: 'suggestions', component: SuggestionsComponent },
     { path: 'sharedFiles', component: SharedFilesComponent },
     { path: 'notices', component: NoticesComponent },
-    { path: 'rateFaculty', component: RateFacultyComponent }
+    { path: 'rateFaculty', component: RateFacultyComponent },
+    { path: 'discussion', component: DiscussionComponent }
+
 
 
             ]
@@ -90,7 +93,9 @@ const APP_ROUTES = [
       { path: 'notices', component: NoticesComponent },
       { path: 'checkTopicUpdate', component: CheckTopicUpdateComponent },
       { path: 'updateTestMarks', component: UpdateTestMarksComponent },
-      { path: 'viewPolls', component: ViewPollComponent }
+      { path: 'viewPolls', component: ViewPollComponent },
+      { path: 'discussion', component: DiscussionComponent }
+
 
 
 
@@ -111,7 +116,9 @@ const APP_ROUTES = [
     { path: 'testReports', component: TestReportsComponent },
     { path: 'notices', component: NoticesComponent },
     { path: 'checkTopicUpdate', component: CheckTopicUpdateComponent },
-    { path: 'viewSchedule', component: ViewScheduleComponent }
+    { path: 'viewSchedule', component: ViewScheduleComponent },
+    { path: 'discussion', component: DiscussionComponent }
+
 
 
   ]
@@ -126,7 +133,9 @@ const APP_ROUTES = [
     { path: 'giveSuggestion', component: GiveSuggestionComponent },
     { path: 'schedule', component: TeacherScheduleComponent },
     { path: 'studentReport', component: StudentReportComponent },
-    { path: 'notices', component: NoticesComponent }
+    { path: 'notices', component: NoticesComponent },
+    { path: 'discussion', component: DiscussionComponent }
+
 
 
 

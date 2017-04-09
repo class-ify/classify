@@ -196,8 +196,8 @@
                     <a href="#"><i class="fa fa-comments"></i> <span class="nav-label">Discussion</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse " aria-expanded="false">
 
-                        <li><a href="500.html">Existing</a></li>
-                        <li><a href="empty_page.html">Initiate</a></li>
+                        <li><a href="500.html">Initiate</a></li>
+                        <li><a [routerLink]="['discussion']">Existing</a></li>
                     </ul>
                 </li>
 
@@ -364,7 +364,7 @@
         <div class="wrapper wrapper-content  animated fadeInRight">
 
           <router-outlet></router-outlet>
-          <p>Paste your code here ! inject components here by making rows</p>
+          <p></p>
 
         </div>
         <div class="footer">
@@ -378,7 +378,7 @@
         </div>
 <!--.................................................................................................................................................-->
 
-</div>
+
 
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery-ui-1.10.4.min.js"></script>
@@ -399,3 +399,4 @@
 
     });
 </script>
+</div>

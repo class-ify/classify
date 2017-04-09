@@ -48,6 +48,7 @@ import { UpdateTestMarksComponent } from './receptionist-dash/update-test-marks/
 import { ViewScheduleComponent } from './director-dash/view-schedule/view-schedule.component';
 import { ViewPollComponent } from './receptionist-dash/view-poll/view-poll.component';
 import { RateFacultyComponent } from './student-dash/rate-faculty/rate-faculty.component';
+import { DiscussionComponent } from './discussion/discussion.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,8 @@ import { RateFacultyComponent } from './student-dash/rate-faculty/rate-faculty.c
     UpdateTestMarksComponent,
     ViewScheduleComponent,
     ViewPollComponent,
-    RateFacultyComponent
+    RateFacultyComponent,
+    DiscussionComponent
     ],
   imports: [
     BrowserModule,

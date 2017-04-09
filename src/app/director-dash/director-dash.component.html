@@ -1,3 +1,4 @@
+
 <div class="pace-done" style="overflow:visible;">
 
   <div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
@@ -115,13 +116,17 @@
                             <img alt="image" class="img-circle" src="img/profile_small.jpg">
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Yash Jain</strong>
                              </span> <span class="text-muted text-xs block">Director <b class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="profile.html">Profile</a></li>
+                            <li>
+                              <a href="profile.html">Profile</a>
+                            </li>
 
                             <li class="divider"></li>
-                            <li><a href="login.html">Logout</a></li>
+                            <li>
+                              <a href="login.html">Logout</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="logo-element">
@@ -189,8 +194,8 @@
                     <a href="#"><i class="fa fa-comments"></i> <span class="nav-label">Discussion</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse " aria-expanded="false">
 
-                        <li><a href="500.html">Existing</a></li>
-                        <li><a href="empty_page.html">Initiate</a></li>
+                        <li><a href="500.html">Initiate</a></li>
+                        <li><a [routerLink]="['discussion']">Existing</a></li>
                     </ul>
                 </li>
 
@@ -355,7 +360,7 @@
 
         <div class="wrapper wrapper-content  animated fadeInRight">
 <router-outlet></router-outlet>
-  <p>Paste your code here ! inject components here by making rows</p>
+  <p></p>
 
         </div>
         <div class="footer">
