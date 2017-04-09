@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { TeacherDashComponent } from '../teacher-dash/teacher-dash.component';
+import { StudentDashComponent } from '../student-dash/student-dash.component';
+
+import { DirectorDashComponent } from '../director-dash/director-dash.component';
+import { ReceptionistDashComponent } from '../receptionist-dash/receptionist-dash.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +22,6 @@ export class HomeComponent implements OnInit {
     this.siddhesh = 'assets/img/faculty/1.jpg';
     this.yash = 'assets/img/faculty/2.jpg'
     this.sid = 'assets/img/faculty/3.jpg'
-    
+
 }
   }

@@ -27,20 +27,15 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 <i class="fa fa-wrench"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
 
                         </div>
                     </div>
                     <div class="ibox-content">
-                        <form id="my-awesome-dropzone" class="dropzone dz-clickable" action="#">
+                        <form id="my-awesome-dropzone" class="dropzone dz-clickable" #sharenotes="ngForm" (ngSubmit)="shareNotesData(sharenotes.value,$event)">
                             <div class="dropzone-previews"></div>
-                            <button type="submit" class="btn btn-primary pull-right">Send</button>
-                        <div class="dz-default dz-message"><span>Drop files here to upload</span></div></form>
+                            <button type="submit" class="btn btn-primary pull-right" ngModel name="send">Send</button>
+                        <div class="dz-default dz-message"><span>Drop files here to upload</span></div>
+                      </form>
 
                     </div>
                 </div>

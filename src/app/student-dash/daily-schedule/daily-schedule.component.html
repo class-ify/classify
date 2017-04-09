@@ -1,10 +1,4 @@
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Daily_Schedule</title>
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
@@ -19,7 +13,10 @@
 
 <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
 
-<div class="pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+<div class="pace-done">
+
+  <div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
   <div class="pace-progress-inner"></div>
 </div>
 <div class="pace-activity"></div></div><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
@@ -31,15 +28,7 @@
 <div class="pace-activity"></div></div>
 
 
-
-
-
-
-
                 <div class="wrapper wrapper-content animated fadeInRight">
-
-
-
 
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
@@ -51,82 +40,33 @@
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                             <i class="fa fa-wrench"></i>
                                         </a>
-                                        <ul class="dropdown-menu dropdown-user">
-                                            <li><a href="#">Config option 1</a>
-                                            </li>
-                                            <li><a href="#">Config option 2</a>
-                                            </li>
-                                        </ul>
 
                                     </div>
                                 </div>
 
                                 <div class="ibox-content inspinia-timeline">
 
-                                    <div class="timeline-item">
+
+                                    <div class="timeline-item" *ngFor="let schedule of schedules">
                                         <div class="row">
                                             <div class="col-md-2 date">
                                                 <i class="fa fa-briefcase"></i>
-                                                6:00 am
+
                                                 <br>
-                                                <small class="text-navy">date</small>
+                                                <small class="text-navy">{{schedule.date}}</small>
                                             </div>
                                             <div class="col-md-10 content no-top-border">
-                                                <p class="m-b-xs"><strong>Name of topic</strong></p>
+                                                <p class="m-b-xs"><strong>{{schedule.topicName}}</strong></p>
 
-                                                <p>other lecture details</p>
+                                                <p>By Professor: {{schedule.teacherName}}</p>
+                                                <p>Start Time: {{schedule.startTime}}</p>
+                                                <p>End Time: {{schedule.endTime}}</p>
 
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-md-2 date">
-                                                <i class="fa fa-file-text"></i>
-                                                7:00 am
-                                                <br>
-                                                <small class="text-navy">date</small>
-                                            </div>
-                                            <div class="col-md-10 content">
-                                                <p class="m-b-xs"><strong>Name of topic</strong></p>
-                                                <p>other lelcture details</p>
-                                            </div>
-                                        </div>
-                                    </div>
 
-
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-md-2 date">
-                                                <i class="fa fa-user-md"></i>
-                                                09:00 pm
-                                                <br>
-                                                <small class="text-navy">date</small>
-                                            </div>
-                                            <div class="col-md-10 content">
-                                                <p class="m-b-xs"><strong>Go to the doctor dr Smith</strong></p>
-                                                <p>
-                                                    Find some issue and go to doctor.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-md-2 date">
-                                                <i class="fa fa-comments"></i>
-                                                12:50 pm
-                                                <br>
-                                                <small class="text-navy">date</small>
-                                            </div>
-                                            <div class="col-md-10 content">
-                                                <p class="m-b-xs"><strong>Chat with Monica and Sandra</strong></p>
-                                                <p>
-                                                    Web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                                </p>
-                                            </div>
-                                        </div>
                                     </div>
 
                                 </div>
@@ -134,12 +74,6 @@
 
 
                         </div>
-
-
-
-
-
-
 
 
 
@@ -181,10 +115,4 @@
 
     <!-- Toastr -->
     <script src="js/plugins/toastr/toastr.min.js"></script>
-
-
-
-
-
-
 </div>

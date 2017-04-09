@@ -1,11 +1,9 @@
 <head>
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
 </head>
 
 <div class=" pace-done">
@@ -14,49 +12,40 @@
 </div>
 <div class="pace-activity"></div></div>
 
-
         <div class="wrapper wrapper-content animated fadeInRight">
 
 
 
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>Test Time Table </h5>
+                            <h5>Poll Results</h5>
                             <div class="ibox-tools">
-                                <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
+
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                     <i class="fa fa-wrench"></i>
                                 </a>
 
                             </div>
                         </div>
-                        <div class="ibox-content">
-                            <h3>Test Type</h3>
-                        </div>
+
                         <div class="ibox-content">
 
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
-                                    <th>Date</th>
-                                    <th>Name</th>
+                                    <th>Subject</th>
                                     <th>Topic</th>
-                                    <th>Marks</th>
-                                    <th>Time</th>
+                                    <th>Votes</th>
+                                    <th>Due Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
 
-                                <tr *ngFor="let testschedule of testschedules">
-                                    <td>{{testschedule.date}}</td>
-                                    <td>{{testschedule.name}}</td>
-                                    <td>
-                                      {{testschedule.topic}}
-                                    </td>
-                                    <td>{{testschedule.marks}}</td>
-                                    <td>{{testschedule.time}}</td>
+                                <tr *ngFor="let poll of polls">
+                                    <td>{{poll.subject}}</td>
+                                    <td>{{poll.topic}}</td>
+                                    <td>{{poll.votes}}</td>
+                                    <td>{{poll.dueDate}}</td>
                                 </tr>
 
                                 </tbody>
@@ -69,6 +58,10 @@
 
 
         </div>
+
+
+
+
 
 
     <!-- Mainly scripts -->

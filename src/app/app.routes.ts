@@ -41,6 +41,8 @@ import { CreateFacultyRatingComponent } from './director-dash/create-faculty-rat
 import { CheckFacultyRatingComponent } from './director-dash/check-faculty-rating/check-faculty-rating.component';
 import { UpdateTestMarksComponent } from './receptionist-dash/update-test-marks/update-test-marks.component';
 import { ViewScheduleComponent } from './director-dash/view-schedule/view-schedule.component';
+import { ViewPollComponent } from './receptionist-dash/view-poll/view-poll.component';
+import { RateFacultyComponent } from './student-dash/rate-faculty/rate-faculty.component';
 
 
 const APP_ROUTES = [
@@ -66,7 +68,8 @@ const APP_ROUTES = [
     { path: 'myTestSchedule', component: MyTestScheduleComponent },
     { path: 'suggestions', component: SuggestionsComponent },
     { path: 'sharedFiles', component: SharedFilesComponent },
-    { path: 'notices', component: NoticesComponent }
+    { path: 'notices', component: NoticesComponent },
+    { path: 'rateFaculty', component: RateFacultyComponent }
 
 
             ]
@@ -86,7 +89,9 @@ const APP_ROUTES = [
       { path: 'updateLectures', component: UpdateLectureComponent },
       { path: 'notices', component: NoticesComponent },
       { path: 'checkTopicUpdate', component: CheckTopicUpdateComponent },
-      { path: 'updateTestMarks', component: UpdateTestMarksComponent }
+      { path: 'updateTestMarks', component: UpdateTestMarksComponent },
+      { path: 'viewPolls', component: ViewPollComponent }
+
 
 
 ]

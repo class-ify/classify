@@ -180,13 +180,16 @@
                     </ul>
                 </li>
 
-                <li>
-                    <a [routerLink]="['revisionPoll']"><i class="fa fa-thumbs-up"></i> <span class="nav-label">Revision Poll</span></a>
-
+                <li class="">
+                    <a href="#"><i class="fa fa-thumbs-up"></i> <span class="nav-label">Revision Poll</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse " aria-expanded="false">
+                      <li><a [routerLink]="['revisionPoll']">Initiate</a></li>
+                        <li><a [routerLink]="['viewPolls']">Existing</a></li>
+                    </ul>
                 </li>
 
                 <li class="">
-                    <a href="#"><i class="fa fa-comments"></i> <span class="nav-label">Discussion</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-comments"></i> <span class="nav-label">Discussio</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse " aria-expanded="false">
 
                         <li><a href="500.html">Existing</a></li>

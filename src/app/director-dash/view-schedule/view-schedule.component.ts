@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UiInitService } from '../../ui-init.service';
-
+import { ScheduleService } from '../../services/schedule.service';
+import { Router } from '@angular/router';
+import { Schedule } from '../../models/schedule';
 
 @Component({
   selector: 'app-view-schedule',
@@ -11,9 +13,17 @@ import { UiInitService } from '../../ui-init.service';
 })
 export class ViewScheduleComponent implements OnInit {
 
-  constructor(private UiInitService:UiInitService) { }
+  schedules: Schedule[] = [];
+    constructor(private UiInitService:UiInitService,
+      private router: Router,
+          private scheduleService: ScheduleService) { }
 
-  ngOnInit() {
-      this.UiInitService.setup();
-  }
+    ngOnInit() {
+        this.UiInitService.setup();
+        this.scheduleService.getSchedule()
+        .subscribe(schedules => {
+            this.schedules = schedules;
+        });
+    }
+
 }

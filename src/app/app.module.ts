@@ -46,6 +46,8 @@ import { CreateFacultyRatingComponent } from './director-dash/create-faculty-rat
 import { CheckFacultyRatingComponent } from './director-dash/check-faculty-rating/check-faculty-rating.component';
 import { UpdateTestMarksComponent } from './receptionist-dash/update-test-marks/update-test-marks.component';
 import { ViewScheduleComponent } from './director-dash/view-schedule/view-schedule.component';
+import { ViewPollComponent } from './receptionist-dash/view-poll/view-poll.component';
+import { RateFacultyComponent } from './student-dash/rate-faculty/rate-faculty.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +93,9 @@ import { ViewScheduleComponent } from './director-dash/view-schedule/view-schedu
     CreateFacultyRatingComponent,
     CheckFacultyRatingComponent,
     UpdateTestMarksComponent,
-    ViewScheduleComponent
+    ViewScheduleComponent,
+    ViewPollComponent,
+    RateFacultyComponent
     ],
   imports: [
     BrowserModule,
